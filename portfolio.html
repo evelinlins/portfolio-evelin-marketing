@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evelin Lins | Marketing Digital, Inteligência Analítica & Negócios</title>
+  <meta name="description" content="Portfólio de Evelin Lins de Albuquerque Souza - Especialista em Inteligência Analítica de Dados, Marketing Estratégico e crescimento de negócios.">
+  
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Styles para a Seção de Cases de Marketing (Totalmente compatível com Modo Claro e Escuro) -->
+  <style>
+    :root {
+      --bg-card: var(--bg-surface, #ffffff);
+      --border-card: var(--border-light, rgba(38, 13, 43, 0.08));
+    }
+    [data-theme="dark"] {
+      --bg-card: var(--bg-surface, #180d21);
+      --border-card: var(--border-light, rgba(255, 255, 255, 0.08));
+    }
+
+    .marketing-cases-section {
+      padding: 90px 0 60px;
+      position: relative;
+    }
+
+    .marketing-case-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-card);
+      margin-bottom: 48px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .case-badge-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .case-sub-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(106, 36, 120, 0.1);
+      color: var(--color-primary-light);
+    }
+    [data-theme="dark"] .case-sub-pill {
+      background: rgba(192, 132, 252, 0.15);
+      color: #d8b4fe;
+    }
+    .case-sub-pill.emerald {
+      background: rgba(11, 74, 60, 0.1);
+      color: var(--color-accent-emerald);
+    }
+    [data-theme="dark"] .case-sub-pill.emerald {
+      background: rgba(45, 212, 191, 0.15);
+      color: #5eead4;
+    }
+
+    .palette-pill-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface-soft);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-light);
+    }
+    .palette-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .palette-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(0,0,0,0.1);
+    }
+
+    .case-quote-box {
+      background: var(--bg-surface-soft);
+      border-left: 4px solid var(--color-primary-light);
+      border-radius: 0 16px 16px 0;
+      padding: 22px 28px;
+      margin: 24px 0 36px;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: var(--text-main);
+    }
+    .case-quote-box.emerald-border {
+      border-left-color: var(--color-accent-emerald);
+    }
+
+    .carousel-section-wrap {
+      margin: 32px 0 44px;
+    }
+    .carousel-header-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .carousel-header-title h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .carousel-header-title span.count-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(106, 36, 120, 0.1);
+      color: var(--color-primary-light);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+    [data-theme="dark"] .carousel-header-title span.count-tag {
+      background: rgba(192, 132, 252, 0.15);
+      color: #d8b4fe;
+    }
+    .carousel-drag-tip {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .horizontal-slider-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 8px 4px 18px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-primary-light) transparent;
+    }
+    .horizontal-slider-strip::-webkit-scrollbar {
+      height: 6px;
+    }
+    .horizontal-slider-strip::-webkit-scrollbar-thumb {
+      background: var(--color-primary-light);
+      border-radius: 4px;
+    }
+
+    .carousel-item-slide {
+      flex: 0 0 250px;
+      scroll-snap-align: start;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-card);
+      transition: transform 0.25s ease;
+      position: relative;
+    }
+    .carousel-item-slide:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .carousel-item-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .carousel-item-slide .slide-badge-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(38, 13, 43, 0.8);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+    }
+
+    .reels-video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 32px 0 24px;
+    }
+    .reel-player-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #000;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      border: 1px solid var(--border-card);
+    }
+    .reel-player-box video {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .reel-player-box .reel-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(38, 13, 43, 0.85);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      z-index: 2;
+    }
+
+    .mirella-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+    .mirella-item-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-card);
+      transition: transform 0.25s ease;
+    }
+    .mirella-item-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .mirella-item-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .mirella-lifestyle-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 36px;
+      background: var(--bg-surface-soft);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      align-items: center;
+      margin-top: 32px;
+      border: 1px solid var(--border-card);
+    }
+    .mirella-lifestyle-img {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .mirella-lifestyle-img img {
+      width: 100%;
+      display: block;
+    }
+
+    
+/* Ingrid Editorial Grid & Product Refinement */
+.ingrid-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 20px 0 32px;
+}
+.ingrid-editorial-card {
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.ingrid-editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ingrid-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin: 24px 0 36px;
+  align-items: stretch;
+}
+.ingrid-editorial-card {
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.ingrid-editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ingrid-editorial-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ingrid-editorial-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ingrid-editorial-img img.post-untrimmed {
+  object-fit: contain !important; /* 100% VISÍVEL: NUNCA CORTA NENHUMA LETRA OU MARGEM */
+  background: #faf8f5;
+}
+.ingrid-editorial-img img.editorial-atmosphere {
+  object-fit: cover !important;
+  object-position: center center;
+}
+.ingrid-editorial-info {
+  padding: 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.ingrid-editorial-info {
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+    .ingrid-product-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      background: var(--bg-surface-soft);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      align-items: center;
+      margin: 32px 0;
+      border: 1px solid var(--border-card);
+    }
+    .ingrid-product-img {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .ingrid-product-img img {
+      width: 100%;
+      display: block;
+    }
+
+    .case-skills-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-card);
+    }
+    .case-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: var(--bg-surface-soft);
+      color: var(--text-main);
+      border: 1px solid var(--border-card);
+    }
+    .case-chip.purple {
+      background: rgba(106, 36, 120, 0.1);
+      color: var(--color-primary-light);
+    }
+    [data-theme="dark"] .case-chip.purple {
+      background: rgba(192, 132, 252, 0.15);
+      color: #d8b4fe;
+    }
+    .case-chip.emerald {
+      background: rgba(11, 74, 60, 0.1);
+      color: var(--color-accent-emerald);
+    }
+    [data-theme="dark"] .case-chip.emerald {
+      background: rgba(45, 212, 191, 0.15);
+      color: #5eead4;
+    }
+
+    @media (max-width: 992px) {
+      .reels-video-grid { grid-template-columns: repeat(2, 1fr); }
+      .mirella-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .mirella-lifestyle-card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .marketing-case-card { padding: 24px 18px; }
+      .reels-video-grid { grid-template-columns: 1fr; }
+      .mirella-gallery-grid { grid-template-columns: 1fr; }
+      
+/* Ingrid Editorial Grid & Product Refinement */
+.ingrid-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 20px 0 32px;
+}
+.ingrid-editorial-card {
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.ingrid-editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ingrid-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin: 24px 0 36px;
+  align-items: stretch;
+}
+.ingrid-editorial-card {
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.ingrid-editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ingrid-editorial-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ingrid-editorial-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ingrid-editorial-img img.post-untrimmed {
+  object-fit: contain !important; /* 100% VISÍVEL: NUNCA CORTA NENHUMA LETRA OU MARGEM */
+  background: #faf8f5;
+}
+.ingrid-editorial-img img.editorial-atmosphere {
+  object-fit: cover !important;
+  object-position: center center;
+}
+.ingrid-editorial-info {
+  padding: 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.ingrid-editorial-info {
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+    .ingrid-product-card { grid-template-columns: 1fr; }
+      .carousel-item-slide { flex: 0 0 210px; }
+    }
+  </style>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('evelin_theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch(e) {}
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- 1. Header / Navbar -->
+  <header class="navbar" id="top-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Evelin Lins Início">
+        Evelin Lins
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#pilares">Especialidades</a></li>
+          <li><a href="#aerometrics">Case Destaque</a></li>
+          <li><a href="#marketing">Cases de Marketing</a></li>
+          <li><a href="#skills">Ferramentas</a></li>
+          <li><a href="#trajetoria">Trajetória</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Button (Modo Claro / Escuro) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro e escuro" title="Alternar modo claro e escuro">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Link para o GitHub Oficial -->
+        <a href="https://github.com/evelinlins" target="_blank" rel="noopener noreferrer" class="social-nav-link" aria-label="GitHub de Evelin Lins" title="GitHub de Evelin Lins">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://wa.me/5511978256551" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Conversar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section (Design Híbrido Clean & Dark com Foto em Arco) -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span class="status-ping"></span> Disponível para novas oportunidades & consultorias
+          </div>
+          
+          <h1 class="hero-title">
+            Transformando dados complexos em <span class="gradient-text">decisões de negócio reais.</span>
+          </h1>
+
+          <p class="hero-description">
+            Olá, sou a <strong>Evelin Lins</strong>. Uno mais de 4 anos de vivência comercial e marketing digital à inteligência analítica de dados. Meu foco é traduzir métricas quantitativas em clareza estratégica e receita.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#aerometrics" class="btn btn-primary">
+              <i class="fa-solid fa-chart-line"></i> Ver Case AeroMetrics
+            </a>
+            <a href="https://wa.me/5511978256551" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fa-brands fa-whatsapp"></i> Entrar em Contato
+            </a>
+          </div>
+
+          <div class="hero-highlights-row">
+            <div class="hero-mini-stat">
+              <span class="num">Marketing & Analytics</span>
+              <span class="label">Mídias · Performance · CRM · Dados</span>
+            </div>
+            <div class="hero-mini-stat">
+              <span class="num">Generation Brasil</span>
+              <span class="label">Formação Intensiva de Dados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrapper">
+          <div class="arch-container">
+            <img 
+              src="assets/img/evelin_hero.jpg" 
+              alt="Evelin Lins - Especialista em Inteligência Analítica e Marketing Estratégico" 
+              class="arch-image"
+              loading="eager"
+            >
+          </div>
+
+          <!-- Badges flutuantes -->
+          <div class="floating-badge badge-role">
+            <div class="badge-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="badge-text">
+              <strong>BI Manager</strong>
+              <span>AeroMetrics Project</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-tech">
+            <div class="badge-icon" style="color: #0b4a3c;">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="badge-text">
+              <strong>Data & Growth</strong>
+              <span>Python · SQL · Meta Ads</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Strip de Métricas & Impacto (Mescla Dark Luxury) -->
+  <section class="container">
+    <div class="stats-strip">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">
+            <span>4</span><span class="highlight">+</span>
+          </div>
+          <div class="stat-label">Anos de Vivência Comercial & Marketing</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">
+            <span>50</span><span class="highlight">%+</span>
+          </div>
+          <div class="stat-label">Atrasos Operacionais Mapeados (Pareto)</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">
+            <span class="highlight">R$</span><span>14,8M</span>
+          </div>
+          <div class="stat-label">Impacto Financeiro Projetado (Case ANAC)</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">
+            <span>100</span><span class="highlight">%</span>
+          </div>
+          <div class="stat-label">Foco em Clareza Estratégica & Decisão</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Sobre Mim (Histórico Integrado com Vivência Internacional, Pedagogia e Dados) -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-frame">
+            <img 
+              src="assets/img/evelin_about.jpg" 
+              alt="Evelin Lins de Albuquerque Souza"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">Trajetória & Propósito</span>
+          <h2 class="section-title">
+            Conectando a visão de mercado e marketing à <span class="highlight-emerald">ciência analítica</span>.
+          </h2>
+
+          <div class="about-quote-box">
+            "Acredito que os dados contam a história, mas é a visão comercial, a empatia e a boa comunicação que transformam números em faturamento real."
+          </div>
+
+          <p class="section-subtitle" style="margin-bottom: 18px;">
+            Minha caminhada no marketing começou na <strong>Bélgica</strong>, país onde morei por cerca de 5 anos e tive meu primeiro contato prático gerando insights de conteúdo e posicionamento para o setor de estética. Essa experiência internacional moldou minha visão multicultural e sensibilidade para o comportamento do público.
+          </p>
+
+          <p class="section-subtitle" style="margin-bottom: 18px;">
+            Além de atuar no marketing digital e na área comercial, sou também <strong>professora (pedagoga)</strong>. Essa formação traz um diferencial raro no universo corporativo: <strong>extrema didática, escuta ativa e clareza</strong> para traduzir relatórios técnicos complexos em linguagem compreensível e acionável para qualquer equipe.
+          </p>
+
+          <p class="section-subtitle" style="margin-bottom: 24px;">
+            Ao somar a vivência comercial como <strong>SDR (Outbound/CRM)</strong>, a criação de conteúdo e <strong>SEO na Winbound</strong>, o design e comunicação na <strong>VINTI</strong> e a especialização prática em Análise de Dados pela <strong>Generation Brasil</strong> (Python, SQL, Power BI, Tableau, Excel Avançado e Machine Learning), consigo conectar o funil de ponta a ponta: da atração à receita.
+          </p>
+
+          <div class="about-bullets-grid">
+            <div class="about-bullet-item">
+              <i class="fa-solid fa-circle-check about-bullet-icon"></i>
+              <span>Didática pedagógica para apresentar relatórios a líderes</span>
+            </div>
+            <div class="about-bullet-item">
+              <i class="fa-solid fa-circle-check about-bullet-icon"></i>
+              <span>Visão de funil 360°: atração orgânica/paga até o fechamento</span>
+            </div>
+            <div class="about-bullet-item">
+              <i class="fa-solid fa-circle-check about-bullet-icon"></i>
+              <span>Análise de métricas vitais: CAC, ROAS, LTV, Churn e conversão</span>
+            </div>
+            <div class="about-bullet-item">
+              <i class="fa-solid fa-circle-check about-bullet-icon"></i>
+              <span>Ponte fluida entre equipes de marketing, vendas e tecnologia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Pilares & Competências de Entrega (6 Cards Expandidos) -->
+  <section class="pillars-section" id="pilares">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;">
+        <span class="section-tag purple">Como Posso Contribuir</span>
+        <h2 class="section-title">Competências Essenciais de Entrega</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Do planejamento de mídias e prospecção comercial à modelagem de dados e dashboards executivos.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Card 1: Mídias Sociais & Conteúdo -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">01</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-hashtag"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Mídias Sociais & Marketing de Conteúdo</h3>
+          <p class="pillar-desc">
+            Planejamento editorial estratégico, copywriting para Instagram e redes sociais, roteirização de carrosséis e produção de artigos com foco em autoridade de marca e engajamento da audiência.
+          </p>
+        </div>
+
+        <!-- Card 2: Tráfego Pago & Performance -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">02</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Tráfego Pago & Performance Marketing</h3>
+          <p class="pillar-desc">
+            Gestão orientada a dados em campanhas de Meta Ads e Google Ads, testes A/B de criativos, mensuração contínua de CAC, ROAS e otimização de taxa de conversão em cada etapa do funil.
+          </p>
+        </div>
+
+        <!-- Card 3: Storytelling & Dashboards -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">03</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Storytelling & Dashboards Executivos</h3>
+          <p class="pillar-desc">
+            Desenvolvimento de painéis dinâmicos e intuitivos no Power BI e Looker Studio, desenhados para que gestores e C-Levels tomem decisões rápidas com clareza visual e filtros estratégicos.
+          </p>
+        </div>
+
+        <!-- Card 4: Qualificação Comercial & CRM -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">04</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-funnel-dollar"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Qualificação Comercial, SDR & CRM</h3>
+          <p class="pillar-desc">
+            Gestão do pipeline comercial no RD Station CRM e ActiveCampaign, estruturação de réguas de nutrição, cold calling consultivo, follow-ups precisos e combate a gargalos no funil de vendas.
+          </p>
+        </div>
+
+        <!-- Card 5: Inteligência Analítica & ETL -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">05</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-database"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Inteligência de Dados & Pipelines (ETL)</h3>
+          <p class="pillar-desc">
+            Tratamento e higienização de bases com Python (Pandas/NumPy), modelagem relacional com SQL, análise exploratória (EDA) e aplicação de Pareto (80/20) para isolar causas-raiz de negócio.
+          </p>
+        </div>
+
+        <!-- Card 6: Design & Identidade Visual -->
+        <div class="pillar-card">
+          <div class="pillar-top-meta">
+            <div class="pillar-number">06</div>
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+          </div>
+          <h3 class="pillar-title">Design Visual & Identidade de Marca</h3>
+          <p class="pillar-desc">
+            Criação de layouts elegantes, materiais promocionais e comunicação visual alinhada ao branding (bagagem prática na VINTI), unindo estética refinada, boa tipografia e escaneabilidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Flagship Project (AeroMetrics com Links Completos) -->
+  <section class="flagship-section" id="aerometrics">
+    <div class="container">
+      <div style="text-align: center; max-width: 740px; margin: 0 auto 50px;">
+        <span class="section-tag">Case Flagship · Destaque Ouro</span>
+        <h2 class="section-title">AeroMetrics: Consultoria de Dados Aéreos</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Um projeto completo de engenharia e inteligência analítica sobre a malha de aviação civil brasileira (dados da ANAC 2024), atuando como <strong>BI Manager</strong>.
+        </p>
+      </div>
+
+      <div class="flagship-box">
+        <div class="flagship-content">
+          <span class="flagship-badge">
+            <i class="fa-solid fa-plane-departure"></i> Projeto ANAC & Generation Brasil
+          </span>
+          <h3 class="flagship-title">O Dilema Operacional vs. Financeiro</h3>
+          <span class="flagship-role">Atuação: BI Manager & Análise de Efeito Cascata</span>
+          
+          <p class="flagship-desc">
+            Em uma crise operacional nos aeroportos de Congonhas e Guarulhos, a liderança se dividia: os atrasos eram culpa do clima ou de falhas internas? Analisando os dados regulatórios com Pareto e dispersão, comprovamos que <strong>mais de 50% dos atrasos decorriam de fatores operacionais internos</strong> (conexões e manutenção).
+          </p>
+
+          <p class="flagship-desc">
+            Minha análise focou no <strong>Efeito Cascata (Reactionary Delays)</strong>: identifiquei que o Aeroporto de Guarulhos sozinho concentrava <strong>29,77% dos minutos perdidos por conexão</strong>, onde um atraso de 5 minutos pela manhã virava um rombo milionário no fim do dia.
+          </p>
+
+          <div class="flagship-metrics-grid">
+            <div class="metric-item">
+              <strong>R$ 14,8 Milhões</strong>
+              <span>Economia projetada em contingências</span>
+            </div>
+            <div class="metric-item">
+              <strong>+7,2 p.p.</strong>
+              <span>Elevação esperada no OTP D15 global</span>
+            </div>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Power BI</span>
+            <span class="tech-tag">Python EDA</span>
+            <span class="tech-tag">SQL Azure</span>
+            <span class="tech-tag">Princípio de Pareto</span>
+            <span class="tech-tag">Storytelling Executivo</span>
+          </div>
+
+          <!-- Botões com Links Oficiais do Projeto AeroMetrics -->
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
+            <a href="https://lively-sky-0d8399010.5.azurestaticapps.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Aplicação no Azure
+            </a>
+            <a href="https://github.com/evelinlins/Aerometrics-projeto" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class="fa-brands fa-github"></i> Ver Código & Docs no GitHub
+            </a>
+            <a href="https://wa.me/5511978256551?text=Ol%C3%A1%20Evelin,%20gostaria%20de%20conversar%20sobre%20o%20case%20AeroMetrics" target="_blank" rel="noopener noreferrer" class="btn btn-emerald btn-sm">
+              <i class="fa-brands fa-whatsapp"></i> Conversar
+            </a>
+          </div>
+        </div>
+
+        <div class="flagship-preview">
+          <img 
+            src="assets/img/aerometrics_preview.png" 
+            alt="Dashboard Executivo AeroMetrics - Power BI"
+            loading="lazy"
+          >
+          <div class="flagship-preview-overlay">
+            <div class="preview-badge-live">
+              Dashboard Interativo Validado
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       6. CASES DE MARKETING & BRANDING ESTRATÉGICO (VINTI, MIRELLA, INGRID)
+       Integrado harmonicamente ao portfólio híbrido oficial
+       ========================================================================== -->
+  <section class="marketing-cases-section" id="marketing">
+    <div class="container">
+
+      <!-- Header Central da Seção de Marketing -->
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 56px;">
+        <span class="section-tag purple">Design, Conteúdo & Conversão</span>
+        <h2 class="section-title">Cases de Marketing Estratégico</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Da construção da identidade visual e planejamento editorial de alto engajamento à automação de fluxos comerciais e CRM.
+        </p>
+      </div>
+
+      <!-- CASE 01: VISUAL MERCHANDISING & BRANDING DIGITAL (VINTI) -->
+      <div class="marketing-case-card">
+
+        <div class="case-badge-header">
+          <span class="case-sub-pill">
+            <i class="fa-solid fa-store"></i> Comunicação, Marketing & CRM · Jul 2024 – Fev 2025
+          </span>
+
+          <div class="palette-pill-bar">
+            <span class="palette-label">Paleta:</span>
+            <div class="palette-dot" style="background: #FF2D9B;" title="Rosa Hot Pink"></div>
+            <div class="palette-dot" style="background: #1a1a1a;" title="Preto Estrutural"></div>
+            <div class="palette-dot" style="background: #ffffff;" title="Branco Respiro"></div>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">
+          Visual Merchandising & <span style="color: var(--color-primary-light);">Branding Digital</span>
+        </h3>
+
+        <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem;">
+          Atuação integrada de 8 meses para empresa especializada em Store Design e Visual Merchandising: criação de identidade de feed com estética editorial, automação de fluxos no ActiveCampaign e produção de conteúdos de alta retenção.
+        </p>
+
+        <!-- Conceito Criativo -->
+        <div class="case-quote-box">
+          <p>
+            <strong>Conceito Criativo — Preppy Moderno (Emily em Paris + Clueless):</strong><br>
+            A estratégia visual uniu a sofisticação da moda parisiense à energia pop contemporânea. O contraste do <em>Rosa Hot Pink</em> com a estrutura de <em>Preto e Branco</em> garantiu uma comunicação divertida, moderna e percebida como <strong>alto padrão e exclusividade</strong>. Tipografia editorial, ritmos visuais fluidos e storytelling de bastidores geraram identificação instantânea com a audiência lojista.
+          </p>
+        </div>
+
+        <!-- Carrossel 1 (ORDEM CORRETA: Capa -> Sinal 1 -> Sinal 2 -> Sinal 3 -> Sinal 4 -> Sinal 5 -> CTA) -->
+        <div class="carousel-section-wrap">
+          <div class="carousel-header-title">
+            <h4>
+              <i class="fa-solid fa-images"></i> Carrossel 1 — 5 Sinais que sua Loja Precisa de VM
+              <span class="count-tag">7 slides</span>
+            </h4>
+            <span class="carousel-drag-tip"><i class="fa-solid fa-arrow-right"></i> Arraste para o lado</span>
+          </div>
+
+          <div class="horizontal-slider-strip">
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Capa</span>
+              <img src="images/vinti/c1_s1.jpg" alt="Capa: Seu brechó parece profissional?" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Sinal 1</span>
+              <img src="images/vinti/c1_s2.jpg" alt="Sinal 1: O cliente entra e não sabe pra onde olhar" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Sinal 2</span>
+              <img src="images/vinti/c1_s3.jpg" alt="Sinal 2: A vitrine não chama atenção" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Sinal 3</span>
+              <img src="images/vinti/c1_s4.jpg" alt="Sinal 3: Peça incrível pendurada como qualquer coisa" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Sinal 4</span>
+              <img src="images/vinti/c1_s5.jpg" alt="Sinal 4: Você quer atrair um perfil mas comunica outro" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Sinal 5</span>
+              <img src="images/vinti/c1_s6.jpg" alt="Sinal 5: O cliente entra mas não entende quem você é" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">CTA Final</span>
+              <img src="images/vinti/c1_s7.jpg" alt="CTA: Reconheceu algum desses sinais?" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Carrossel 2 (ORDEM CORRETA: Capa TV Retrô -> Durante anos... -> Mesmo sem apoio... -> Até que um dia... -> O mundo mudou... -> Fatura 30-50k -> CTA) -->
+        <div class="carousel-section-wrap">
+          <div class="carousel-header-title">
+            <h4>
+              <i class="fa-solid fa-book-open-reader"></i> Carrossel 2 — Storytelling: A Jornada da Empreendedora
+              <span class="count-tag">7 slides</span>
+            </h4>
+            <span class="carousel-drag-tip"><i class="fa-solid fa-arrow-right"></i> Arraste para o lado</span>
+          </div>
+
+          <div class="horizontal-slider-strip">
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Capa</span>
+              <img src="images/vinti/c2_s1.jpg" alt="Capa: Chamaram de roupa de morto (TV Retrô)" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 1</span>
+              <img src="images/vinti/c2_s2.jpg" alt="Durante anos, ela ouviu de tudo..." loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 2</span>
+              <img src="images/vinti/c2_s3.jpg" alt="Mesmo sem apoio, ela começou" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 3</span>
+              <img src="images/vinti/c2_s4.jpg" alt="Até que um dia..." loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 4</span>
+              <img src="images/vinti/c2_s5.jpg" alt="O mundo mudou, a moda mudou" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 5</span>
+              <img src="images/vinti/c2_s6.jpg" alt="Hoje ela fatura de 30 a 50 mil por mês" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">CTA Final</span>
+              <img src="images/vinti/c2_s7.jpg" alt="Salva esse carrossel pra lembrar..." loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Carrossel 3 (ORDEM CORRETA: Capa Lisa Kudrow -> A verdade -> O segredo -> Friends na cozinha -> Jennifer braço -> Não sabe por onde começar? -> CTA Workshop) -->
+        <div class="carousel-section-wrap">
+          <div class="carousel-header-title">
+            <h4>
+              <i class="fa-solid fa-briefcase"></i> Carrossel 3 — Consultoria de Interiores Lucrativa
+              <span class="count-tag">7 slides</span>
+            </h4>
+            <span class="carousel-drag-tip"><i class="fa-solid fa-arrow-right"></i> Arraste para o lado</span>
+          </div>
+
+          <div class="horizontal-slider-strip">
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Capa</span>
+              <img src="images/vinti/c3_s1.jpg" alt="Capa: Consultoria de Interiores Lucrativa" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 2</span>
+              <img src="images/vinti/c3_s2.jpg" alt="A verdade que ninguém conta..." loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 3</span>
+              <img src="images/vinti/c3_s3.jpg" alt="O segredo das consultorias lucrativas" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 4</span>
+              <img src="images/vinti/c3_s4.jpg" alt="Mas como fazer isso? (Friends na cozinha)" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 5</span>
+              <img src="images/vinti/c3_s5.jpg" alt="Dá mesmo pra ganhar dinheiro com consultorias?" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 6</span>
+              <img src="images/vinti/c3_s6.jpg" alt="Não sabe por onde começar?" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">CTA Final</span>
+              <img src="images/vinti/c3_s7.jpg" alt="Quer aprender a fazer consultorias? Workshop" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- REELS ESTRATÉGICOS -->
+        <div style="margin-top: 36px;">
+          <div class="carousel-header-title">
+            <h4><i class="fa-solid fa-film"></i> Reels Estratégicos Produzidos (Reprodução Nativa)</h4>
+            <span class="carousel-drag-tip"><i class="fa-solid fa-play"></i> 6 vídeos MP4</span>
+          </div>
+
+          <div class="reels-video-grid">
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 01</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel1.mp4" type="video/mp4"></video>
+            </div>
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 02</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel2.mp4" type="video/mp4"></video>
+            </div>
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 03</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel3.mp4" type="video/mp4"></video>
+            </div>
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 04</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel4.mp4" type="video/mp4"></video>
+            </div>
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 05</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel5.mp4" type="video/mp4"></video>
+            </div>
+            <div class="reel-player-box">
+              <span class="reel-tag"><i class="fa-solid fa-play"></i> Reel 06</span>
+              <video controls preload="metadata"><source src="videos/vinti_reel6.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-skills-chips">
+          <span class="case-chip purple"><i class="fa-solid fa-palette"></i> Design Visual & Editorial</span>
+          <span class="case-chip purple"><i class="fa-solid fa-video"></i> Roteiro & Edição de Vídeo</span>
+          <span class="case-chip purple"><i class="fa-solid fa-pen-fancy"></i> Copywriting de Conversão</span>
+          <span class="case-chip emerald"><i class="fa-solid fa-envelope-circle-check"></i> ActiveCampaign (CRM)</span>
+          <span class="case-chip emerald"><i class="fa-brands fa-whatsapp"></i> Automação de WhatsApp</span>
+          <span class="case-chip emerald"><i class="fa-solid fa-arrow-trend-up"></i> Nutrição & Funil de Vendas</span>
+        </div>
+
+      </div>
+
+      <!-- CASE 02: MIRELLA CARLA (LUXO EQUILIBRADO) -->
+      <div class="marketing-case-card">
+
+        <div class="case-badge-header">
+          <span class="case-sub-pill">
+            <i class="fa-solid fa-gem"></i> Branding & Posicionamento · Beleza de Luxo
+          </span>
+
+          <div class="palette-pill-bar">
+            <span class="palette-label">Paleta:</span>
+            <div class="palette-dot" style="background: #c4846a;" title="Terracota"></div>
+            <div class="palette-dot" style="background: #d4b896;" title="Nude Suave"></div>
+            <div class="palette-dot" style="background: #f5ebe0;" title="Creme Base"></div>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">
+          Mirella Carla — <span style="color: var(--color-primary-light);">Luxo Equilibrado</span>
+        </h3>
+
+        <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem;">
+          Construção de identidade visual e curadoria de feed para nail designer de alto padrão: a união entre o neutro sofisticado e o impacto visual que valoriza a técnica impecável.
+        </p>
+
+        <div class="case-quote-box">
+          <p>
+            <strong>A Estratégia de 'Luxo Equilibrado':</strong><br>
+            A cliente buscava navegar entre o <em>neutro sofisticado</em> (elegância atemporal) e o <em>brilhante impactante</em> (presença marcante). A solução foi desenhar uma tipografia cursiva refinada combinada a amplos respiros de layout. Essa base neutra em tons de Terracota e Nude permitiu que <strong>as fotos dos procedimentos ganhassem protagonismo total</strong>, comunicando autoridade incontestável e elevando a percepção de valor dos serviços.
+          </p>
+        </div>
+
+        <div class="carousel-header-title">
+          <h4>
+            <i class="fa-solid fa-border-all"></i> Série Editorial: Os 7 Estilos Femininos
+            <span class="count-tag">7 peças originais</span>
+          </h4>
+        </div>
+
+        <div class="mirella-gallery-grid">
+          <div class="mirella-item-card"><img src="images/mirella/mirella_romantico.jpg" alt="Estilo Romântico" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_criativo.jpg" alt="Estilo Criativo" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_sexy.jpg" alt="Estilo Sexy" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_classico.jpg" alt="Estilo Clássico" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_elegante.jpg" alt="Estilo Elegante" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_dramatico.jpg" alt="Estilo Dramático" loading="lazy"></div>
+          <div class="mirella-item-card"><img src="images/mirella/mirella_casual.jpg" alt="Estilo Casual" loading="lazy"></div>
+        </div>
+
+        <!-- Post Institucional Separado (O Sorriso) -->
+        <div class="mirella-lifestyle-card">
+          <div class="mirella-lifestyle-img">
+            <img src="images/mirella/mirella_sorriso.jpg" alt="Post Institucional — O Sorriso" loading="lazy">
+          </div>
+          <div>
+            <span class="case-sub-pill" style="margin-bottom: 8px;">Post Institucional & Branding Pessoal</span>
+            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">Humanização & Conexão Emocional</h4>
+            <p style="color: var(--text-muted); line-height: 1.75; font-size: 0.95rem;">
+              Além dos conteúdos técnicos, a linha editorial contemplou posts focados em conexão humana e valor aspiracional: <em>"O sorriso é a sua motivação diária para perseguir os seus maiores sonhos."</em> Uma comunicação que constrói empatia, fidelidade e transforma clientes em verdadeiras embaixadoras da marca.
+            </p>
+          </div>
+        </div>
+
+        <div class="case-skills-chips">
+          <span class="case-chip purple"><i class="fa-solid fa-palette"></i> Identidade Visual</span>
+          <span class="case-chip purple"><i class="fa-solid fa-feather-pointed"></i> Tipografia Editorial</span>
+          <span class="case-chip emerald"><i class="fa-brands fa-instagram"></i> Planejamento de Feed</span>
+          <span class="case-chip emerald"><i class="fa-solid fa-crown"></i> Posicionamento de Luxo</span>
+        </div>
+
+      </div>
+
+      <!-- CASE 03: INGRID LOPES (QUIET LUXURY) -->
+      <div class="marketing-case-card">
+
+        <div class="case-badge-header">
+          <span class="case-sub-pill emerald">
+            <i class="fa-solid fa-spa"></i> Branding Minimalista · Quiet Luxury & Produto Digital
+          </span>
+
+          <div class="palette-pill-bar">
+            <span class="palette-label">Paleta:</span>
+            <div class="palette-dot" style="background: #ffffff;" title="Branco Respiro"></div>
+            <div class="palette-dot" style="background: #3d2b1f;" title="Marrom Escuro Profundo"></div>
+            <div class="palette-dot" style="background: #d4b896;" title="Nude Orgânico"></div>
+          </div>
+        </div>
+
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">
+          Ingrid Lopes — <span style="color: var(--color-accent-emerald);">Quiet Luxury & Minimalismo</span>
+        </h3>
+
+        <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem;">
+          Identidade visual limpa, estética atemporal e diagramação de produto educacional: o luxo silencioso traduzido em respiro de layout e sofisticação pura.
+        </p>
+
+        <div class="case-quote-box emerald-border">
+          <p>
+            <strong>A Estratégia de Quiet Luxury:</strong><br>
+            Ao utilizar tons de <em>Marrom e Nude</em>, criamos uma base orgânica e acolhedora, elevada pelo <em>Branco</em> para garantir a clareza exigida pela estética aesthetic. A estratégia focou em <strong>remover ruídos</strong>: cada elemento gráfico foi reduzido ao seu estado mais puro para que a qualidade e exclusividade da marca falassem mais alto que qualquer ornamento. Uma presença digital que se impõe pelo refinamento e ordem.
+          </p>
+        </div>
+
+        <!-- Carrossel Tendências 2026 Completo (8 Slides em Alta Resolução) -->
+        <div class="carousel-section-wrap">
+          <div class="carousel-header-title">
+            <h4>
+              <i class="fa-solid fa-newspaper"></i> Carrossel Editorial: Tendências de Beleza de 2026
+              <span class="count-tag">8 slides completos</span>
+            </h4>
+            <span class="carousel-drag-tip"><i class="fa-solid fa-arrow-right"></i> Arraste para o lado</span>
+          </div>
+
+          <div class="horizontal-slider-strip">
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Capa</span>
+              <img src="images/ingrid/ingrid_c1_s1_capa.jpg" alt="Tendências de Beleza de 2026 (Demi Moore)" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 1</span>
+              <img src="images/ingrid/ingrid_c1_s2_franja.jpg" alt="Micro Franja" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 2</span>
+              <img src="images/ingrid/ingrid_c1_s3_wethair.jpg" alt="Penteado Wet Hair" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 3</span>
+              <img src="images/ingrid/ingrid_c1_s4_makefresh.jpg" alt="Make Fresh e Iluminada" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 4</span>
+              <img src="images/ingrid/ingrid_c1_s5_acessorios.jpg" alt="Penteados com Acessórios" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 5</span>
+              <img src="images/ingrid/ingrid_c1_s6_unhas.jpg" alt="Unhas Minimalistas e Futuristas" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">Slide 6</span>
+              <img src="images/ingrid/ingrid_c1_s7_sobrancelhas.jpg" alt="Sobrancelhas Naturais" loading="lazy">
+            </div>
+            <div class="carousel-item-slide">
+              <span class="slide-badge-label">CTA Final</span>
+              <img src="images/ingrid/ingrid_c1_s8_cta.jpg" alt="Qual você mais gostou? Comente" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- LINHA EDITORIAL & BRANDING VISUAL SENSORIAL -->
+        <div style="margin: 36px 0 28px;">
+          <div class="carousel-header-title">
+            <h4>
+              <i class="fa-solid fa-camera-retro"></i> Linha Editorial & Atmosfera de Marca
+              <span class="count-tag">Autoridade Técnica & Sensorial</span>
+            </h4>
+          </div>
+
+          <div class="ingrid-editorial-grid">
+            <div class="ingrid-editorial-card">
+              <div class="ingrid-editorial-img">
+                <img src="images/ingrid/ingrid_post_3erros.jpg" alt="Carrossel Técnico — 3 Erros Fatais Que Fazem Seu Brilho Espelhado Sumir" class="post-untrimmed" loading="lazy">
+              </div>
+              <div class="ingrid-editorial-info">
+                <span class="case-sub-pill emerald" style="margin-bottom: 8px; width: fit-content;">Carrossel Técnico & Retenção</span>
+                <h5 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
+                  3 Erros Fatais: Brilho Espelhado
+                </h5>
+                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.68; margin: 0;">
+                  Conteúdo de atração focado na dor da manicure profissional (<em>"3 Erros fatais que fazem seu brilho espelhado sumir!"</em>). Comunicação direta que retém audiência, gera salvamentos e constrói autoridade técnica imediata.
+                </p>
+              </div>
+            </div>
+
+            <div class="ingrid-editorial-card">
+              <div class="ingrid-editorial-img">
+                <img src="images/ingrid/ingrid_cortina.jpg" alt="Atmosfera Visual Quiet Luxury — Linho Branco e Joia Minimalista" class="editorial-atmosphere" loading="lazy">
+              </div>
+              <div class="ingrid-editorial-info">
+                <span class="case-sub-pill emerald" style="margin-bottom: 8px; width: fit-content;">Branding Sensorial & Quiet Luxury</span>
+                <h5 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
+                  Estética Sensorial & Calma Visual
+                </h5>
+                <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.68; margin: 0;">
+                  Fotografia editorial com linho branco, luz natural difusa e anel de design minimalista. Elimina qualquer ruído visual, transmitindo o alto padrão e a sofisticação da experiência de atendimento Ingrid Lopes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUTO DIGITAL: APOSTILA OFICIAL MÉTODO ESCUDO DE CRISTAL (FOTO ORIGINAL) -->
+        <div class="ingrid-product-card">
+          <div class="ingrid-product-img">
+            <img src="images/ingrid/apostila.jpg" alt="Capa Oficial da Apostila — Método Escudo de Cristal por Ingrid Lopes" loading="lazy">
+          </div>
+          <div>
+            <span class="case-sub-pill emerald" style="margin-bottom: 8px;">Infoproduto & Diagramação Didática</span>
+            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">
+              Apostila Oficial — Método Escudo de Cristal
+            </h4>
+            <p style="color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; margin-bottom: 12px;">
+              Desenvolvimento e diagramação completa do material didático oficial para o curso de Ingrid Lopes em esmaltação de cristal. Utilizando a foto original e o conceito visual cristalino com efeito prismático suave, o projeto eleva o valor percebido do curso com tipografia limpa, hierarquia de aprendizado clara e acabamento editorial de alto padrão.
+            </p>
+            <div style="font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--color-accent-emerald-light); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-gem"></i> <em>"Menos retoques para a cliente, mais lucro para você."</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-skills-chips">
+          <span class="case-chip emerald"><i class="fa-solid fa-leaf"></i> Quiet Luxury</span>
+          <span class="case-chip emerald"><i class="fa-solid fa-book-open"></i> Diagramação de E-books</span>
+          <span class="case-chip purple"><i class="fa-solid fa-feather"></i> Linha Editorial de Beleza</span>
+          <span class="case-chip purple"><i class="fa-solid fa-layer-group"></i> Produtos Digitais</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 7. Caixa de Ferramentas (Skills Expandidas + Google Analytics) -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 50px;">
+        <span class="section-tag purple">Ferramentas & Tecnologias</span>
+        <h2 class="section-title">Caixa de Ferramentas</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Tecnologias e metodologias dominadas na prática para gerar crescimento, inteligência de marketing e receita.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #f59e0b;">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div class="skill-name">Power BI</div>
+          <div class="skill-category">Storytelling & DAX</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #3b82f6;">
+            <i class="fa-brands fa-python"></i>
+          </div>
+          <div class="skill-name">Python</div>
+          <div class="skill-category">Pandas & NumPy</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #06b6d4;">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div class="skill-name">SQL & Bancos</div>
+          <div class="skill-category">Queries & Modelagem</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #ea4335;">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <div class="skill-name">Google Data Analytics</div>
+          <div class="skill-category">Certificação Coursera</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #2563eb;">
+            <i class="fa-brands fa-meta"></i>
+          </div>
+          <div class="skill-name">Meta & Google Ads</div>
+          <div class="skill-category">Tráfego Pago & ROAS</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #e1306c;">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="skill-name">Redes Sociais & Copy</div>
+          <div class="skill-category">Instagram & Conteúdo</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #21759b;">
+            <i class="fa-brands fa-wordpress"></i>
+          </div>
+          <div class="skill-name">SEO & WordPress</div>
+          <div class="skill-category">Artigos & Tráfego Orgânico</div>
+        </div>
+
+        <div class="skill-pill-card">
+          <div class="skill-icon-wrap" style="color: #6366f1;">
+            <i class="fa-solid fa-filter"></i>
+          </div>
+          <div class="skill-name">RD Station & CRMs</div>
+          <div class="skill-category">Funil, SDR & Nutrição</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Minha Trajetória (Linha do Tempo na Ordem Cronológica Solicitada) -->
+  <section class="timeline-section" id="trajetoria">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 50px;">
+        <span class="section-tag">Histórico & Evolução</span>
+        <h2 class="section-title">Minha Trajetória</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Da vivência internacional e formação didática à liderança em projetos de inteligência analítica de dados.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Item 1: Origem / Vivência Internacional na Bélgica -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">Vivência Internacional · Bélgica (~5 anos)</div>
+            <h3 class="timeline-role">Primeiro Contato com Marketing & Conteúdo</h3>
+            <div class="timeline-company">Bélgica · Experiência Internacional</div>
+            <p class="timeline-text">
+              Durante o período de aproximadamente 5 anos vivendo na Bélgica, tive meu primeiro contato prático com o universo do marketing digital. Apoiei uma empreendedora na área de estética com insights de posicionamento, criação de conteúdos e comunicação estratégica com o público, despertando minha paixão pela conexão entre marcas e pessoas.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Visão Multicultural</span>
+              <span class="timeline-tag-pill">Marketing para Estética</span>
+              <span class="timeline-tag-pill">Insights de Conteúdo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Formação Superior & Didática Pedagógica -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">2020 — 2025</div>
+            <h3 class="timeline-role">Licenciatura em Pedagogia (UNINOVE) & CST em Marketing Digital (Ampli)</h3>
+            <div class="timeline-company">UNINOVE (2020 – 2022) · Ampli (2023 – 2025)</div>
+            <p class="timeline-text">
+              Iniciei a graduação em Pedagogia pela UNINOVE em 2020 — período em que descobri o marketing digital — e concluí a licenciatura em 2022. Em 2023 iniciei o CST em Marketing Digital pela Ampli, concluído em 2025. Minha formação como professora é um diferencial raro no universo corporativo: desenvolve didática refinada, escuta ativa e a facilidade singular de traduzir métricas densas em linguagem acessível para qualquer equipe ou liderança.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Professora / Pedagoga</span>
+              <span class="timeline-tag-pill">Didática Executiva</span>
+              <span class="timeline-tag-pill">Marketing Digital</span>
+              <span class="timeline-tag-pill">Comunicação Assertiva</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Winbound Marketing - Analista Comercial Jr / SDR -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">novembro de 2023 - março de 2024 (5 meses) · Híbrido</div>
+            <h3 class="timeline-role">Analista Comercial Jr / SDR (Sales Development Representative)</h3>
+            <div class="timeline-company">Winbound Marketing</div>
+            <p class="timeline-text">
+              Execução da estratégia de prospecção ativa (Outbound), qualificação de leads e gestão completa do pipeline de vendas no RD Station CRM. Condução de cold calling consultivo, triagem com tomadores de decisão, envio de e-mails estratégicos, agendamento de reuniões com executivos de fechamento e rotinas rigorosas de follow-up para redução de perdas no funil comercial.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">RD Station CRM</span>
+              <span class="timeline-tag-pill">Inside Sales / SDR</span>
+              <span class="timeline-tag-pill">Outbound Sales</span>
+              <span class="timeline-tag-pill">Qualificação de Leads</span>
+              <span class="timeline-tag-pill">Cold Calling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Winbound Marketing - Redatora & Estrategista de Conteúdo SEO -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">março de 2024 - fevereiro de 2025 (1 ano) · Remoto</div>
+            <h3 class="timeline-role">Redatora & Estrategista de Conteúdo Digital</h3>
+            <div class="timeline-company">Winbound Marketing</div>
+            <p class="timeline-text">
+              Planejamento, produção e otimização de conteúdos digitais focados em atração orgânica, autoridade e conversão. Criação de artigos estruturados para blogs, produção de roteiros e carrosséis para Instagram, aplicação avançada de técnicas de SEO on-page (pesquisa de palavras-chave e escaneabilidade) e gestão de publicações no WordPress.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Marketing de Conteúdo</span>
+              <span class="timeline-tag-pill">SEO On-page</span>
+              <span class="timeline-tag-pill">WordPress</span>
+              <span class="timeline-tag-pill">Copywriting</span>
+              <span class="timeline-tag-pill">Instagram Marketing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: VINTI - Comunicação, Design & CRM -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">julho de 2024 - fevereiro de 2025 (8 meses)</div>
+            <h3 class="timeline-role">Comunicação, Design & CRM</h3>
+            <div class="timeline-company">VINTI - Visual Merchandising & Store Design</div>
+            <p class="timeline-text">
+              Gestão da plataforma ActiveCampaign, réguas de relacionamento, disparos de e-mail marketing e fluxos de atendimento via WhatsApp. Atuação na criação de design visual e peças de comunicação alinhadas à estética refinada e ao posicionamento premium da marca no varejo.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">ActiveCampaign</span>
+              <span class="timeline-tag-pill">Design Visual</span>
+              <span class="timeline-tag-pill">E-mail Marketing</span>
+              <span class="timeline-tag-pill">Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Consultoria Estratégica Independente (Trabalho Atual) -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">2025 - Presente (Atuação Atual)</div>
+            <h3 class="timeline-role">Consultora em Marketing, Tráfego & Inteligência de Negócios</h3>
+            <div class="timeline-company">Atuação Estratégica Independente</div>
+            <p class="timeline-text">
+              Diagnósticos de posicionamento digital, estruturação de canais de atração, estratégias de tráfego pago e orgânico, automação de nutrição e acompanhamento de métricas de conversão e receita para marcas e empreendedores.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Estratégia Digital</span>
+              <span class="timeline-tag-pill">Tráfego & Conversão</span>
+              <span class="timeline-tag-pill">Automação de Marketing</span>
+              <span class="timeline-tag-pill">Consultoria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Generation Brasil - Bootcamp Intensivo de Análise de Dados -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">julho de 2026 - outubro de 2026</div>
+            <h3 class="timeline-role">Bootcamp de Análise de Dados</h3>
+            <div class="timeline-company">Generation Brasil</div>
+            <p class="timeline-text">
+              Imersão prática e de alta intensidade focada no desenvolvimento de competências técnicas e socioemocionais para análise de dados estratégica e resolução de problemas de negócios. Currículo completo: Análise de Dados, SQL, Python, Power BI, Tableau, Figma, Excel Avançado, Limpeza de Dados (Data Cleaning), Visualização de Dados, IA aplicada a Dados, Modelos Preditivos, Machine Learning e Metodologias Ágeis. Atuei como BI Manager no projeto regulatório da ANAC (AeroMetrics), onde o Azure foi utilizado como infraestrutura de banco de dados da solução.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Python</span>
+              <span class="timeline-tag-pill">SQL</span>
+              <span class="timeline-tag-pill">Power BI</span>
+              <span class="timeline-tag-pill">Tableau</span>
+              <span class="timeline-tag-pill">Machine Learning</span>
+              <span class="timeline-tag-pill">Modelos Preditivos</span>
+              <span class="timeline-tag-pill">Figma</span>
+              <span class="timeline-tag-pill">Metodologias Ágeis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Certificação Google Data Analytics -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-period">setembro de 2026 - Especialização Contínua</div>
+            <h3 class="timeline-role">Google Data Analytics Professional Certificate</h3>
+            <div class="timeline-company">Google & Coursera</div>
+            <p class="timeline-text">
+              Formação profissional chancelada pelo Google. Conclusão do programa <strong>Foundations: Data, Data, Everywhere</strong> (02/09/2026), aprofundando o ciclo de vida completo dos dados, boas práticas analíticas globais e governança para tomada de decisão.
+            </p>
+            <div style="margin-top: 10px;">
+              <a href="https://coursera.org/verify/YIL6ZHJBON41" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--color-accent-emerald-light); font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                <i class="fa-solid fa-certificate"></i> Verificar Certificado Oficial (ID: YIL6ZHJBON41)
+              </a>
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag-pill">Google Certified</span>
+              <span class="timeline-tag-pill">Data Foundations</span>
+              <span class="timeline-tag-pill">Coursera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ Section (Disponibilidade ampliada para Marketing e Dados) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div>
+          <span class="section-tag purple">Tire suas Dúvidas</span>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          <p class="section-subtitle">
+            Respostas diretas sobre minha disponibilidade, modelos de atuação e formatos de colaboração.
+          </p>
+          <a href="https://wa.me/5511978256551" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 10px;">
+            <i class="fa-regular fa-comment-dots"></i> Fazer Outra Pergunta
+          </a>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button class="faq-question">
+              Qual a sua disponibilidade para novas oportunidades?
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Estou atualmente disponível e aberta a posições como <strong>Analista de Dados</strong>, <strong>Analista de Marketing / Growth</strong> ou <strong>Inteligência de Mercado</strong> (modelos CLT, PJ, híbrido ou 100% remoto), bem como para consultorias estratégicas em estruturação de métricas, tráfego, automação comercial e dashboards executivos.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Qual é o seu principal diferencial profissional?
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              A união de mais de 4 anos no marketing, na área comercial (SDR/CRM) e no design aliada ao rigor da análise de dados e à <strong>minha didática como pedagoga</strong>: não olho apenas para linhas e colunas; compreendo o impacto financeiro no funil de vendas, a psicologia de atração do cliente e sei explicar gráficos em linguagem executiva e acessível para que qualquer liderança decida com segurança.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Você atende empresas fora de São Paulo?
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Sim! Resido na região metropolitana de São Paulo, mas atendo clientes e equipes em qualquer lugar do Brasil e do mundo em modelo remoto, utilizando ferramentas colaborativas como Teams, Slack, GitHub e Google Workspace.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Como funciona uma consultoria ou projeto sob demanda?
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Iniciamos com uma conversa de alinhamento para entender as dores do negócio, os dados ou canais disponíveis. A partir disso, desenho a proposta com cronograma de entregas (diagnóstico, estruturação, testes e entrega interativa) com validações ágeis a cada etapa.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Final CTA Section (Frase Ajustada Convidativa) -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-title">
+          Pronto para gerar <span>clareza analítica & crescimento</span> para seu negócio?
+        </h2>
+        <p class="cta-subtitle">
+          Seja para integrar seu time ou para estruturar uma consultoria estratégica personalizada: estou pronta para impulsionar seus resultados.
+        </p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5511978256551" target="_blank" rel="noopener noreferrer" class="btn btn-emerald">
+            <i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/evelin-lins-de-albuquerque-souza-3245152a1/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); color: #fff;">
+            <i class="fa-brands fa-linkedin"></i> Conectar no LinkedIn
+          </a>
+          <a href="https://github.com/evelinlins" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); color: #fff;">
+            <i class="fa-brands fa-github"></i> Ver Projetos no GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <strong>Evelin Lins</strong> · Marketing Estratégico, Inteligência Analítica & Negócios © 2026
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/evelinlins" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Evelin Lins">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/evelin-lins-de-albuquerque-souza-3245152a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/5511978256551" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+  <!-- Inline failsafe for theme toggle -->
+  <script>
+    (function() {
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.onclick = function(e) {
+          if (e && e.preventDefault) e.preventDefault();
+          if (window.toggleTheme) {
+            window.toggleTheme();
+          } else {
+            var root = document.documentElement;
+            var curr = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+            var next = curr === 'light' ? 'dark' : 'light';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('evelin_theme', next); } catch(err) {}
+          }
+        };
+      }
+    })();
+  </script>
+</body>
+</html>
